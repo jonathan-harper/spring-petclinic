@@ -2,9 +2,9 @@ name: Build
 
 on:
   push:
-    branches: [ main ]
+    branches: [ sqli-demo ]
   pull_request:
-    branches: [ main ]
+    branches: [ sqli-demo ]
 
 jobs:
   build-and-analyze:
