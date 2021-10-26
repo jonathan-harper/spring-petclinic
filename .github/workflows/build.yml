@@ -38,8 +38,8 @@ jobs:
       - name: Build and Run Contrast Scan
         run: ./mvnw --batch-mode verify
         env:
-          CONTRAST__API__URL: https://teamserver-staging.contsec.com/Contrast
-          CONTRAST__API__ORGANIZATION_ID: c5f79c46-7c74-45a0-b4c4-565da52827fa
+          CONTRAST__API__URL: ${{ secrets.CONTRAST__API__URL }}
+          CONTRAST__API__ORGANIZATION_ID: ${{ secrets.CONTRAST__API__ORGANIZATION_ID }}
           CONTRAST__API__USER_NAME: ${{ secrets.CONTRAST__API__USER_NAME }}
           CONTRAST__API__API_KEY: ${{ secrets.CONTRAST__API__API_KEY }}
           CONTRAST__API__SERVICE_KEY: ${{ secrets.CONTRAST__API__SERVICE_KEY }}
